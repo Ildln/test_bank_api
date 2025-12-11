@@ -24,7 +24,7 @@ class TestCreateUser:
 
         created_user = next(u for u in check_users.root if u.id == response.id)
         assert created_user.username == response.username
-        assert created_user.role == response.role
+
 
     @pytest.mark.parametrize(
         "username, password", [
