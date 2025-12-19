@@ -8,6 +8,7 @@ def account_(api_manager, create_user_request):
     response = api_manager.user_steps.create_account(create_user_request)
     return response
 
+
 @pytest.fixture
 def account_factory(api_manager, create_user_request):
     def _create_account(balance: int = 0):
