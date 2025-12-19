@@ -2,8 +2,9 @@ import pytest
 
 from src.main.api.models.accounts.transfer import AccountTransferRequest
 
-class TransferApiAccount:
 
+@pytest.mark.api
+class TransferApiAccount:
     def test_account_transfer_valid(self, api_manager, account_factory, create_user_request):
         """Тест: перевод средст между банковскими счетами /transfer"""
         account1 = account_factory(balance=2000)

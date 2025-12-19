@@ -5,7 +5,7 @@ from src.main.api.models.credits.repay import CreditRepayRequest
 from src.main.api.models.credits.request import CreditRequest
 
 
-
+@pytest.mark.api
 class TestCredit:
     def test_user_credit_request_valid(self, api_manager, credit_account_factory, create_credit_user_request):
         """Тест на запрос на получение кредите /credit/request"""

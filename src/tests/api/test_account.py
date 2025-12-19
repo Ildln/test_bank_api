@@ -4,7 +4,7 @@ from src.main.api.generators.model_generator import RandomModelGeneration
 from src.main.api.models.accounts.deposit import DepositRequest
 
 
-
+@pytest.mark.api
 class TestApiAccount:
     def test_create_account(self, api_manager, create_user_request):
         """Тест на создание одного аккаунта"""
